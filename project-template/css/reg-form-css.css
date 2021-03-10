@@ -1,0 +1,30 @@
+body {
+    background-color: blue;
+}
+
+section {
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: chartreuse;
+    float: right;
+}
+
+div {
+    background-color: brown;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 480px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
