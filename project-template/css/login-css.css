@@ -23,6 +23,10 @@ input[type=text], input[type=password] {
   input[type=text]:focus {
       border : 3px solid #2da2ca;
   }
+
+  h2 {
+    background-color: aquamarine;
+  }
   
   /* Set a style for all buttons */
   button {
@@ -35,6 +39,7 @@ input[type=text], input[type=password] {
     width: 100%;
     border-radius: 30px;
     outline: none;
+    float: right;
   }
   
   button:hover {
@@ -104,6 +109,7 @@ input[type=text], input[type=password] {
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
     width: 40%; /* Could be more or less, depending on screen size */
+    position: relative;
   }
   
   /* The Close Button */
@@ -123,9 +129,9 @@ input[type=text], input[type=password] {
     color: rgb(55, 158, 209);
     cursor: pointer;
   }
-  form {
+  /* form {
       position: relative;
-  }
+  } */
   
   /* Add Zoom Animation */
   .animate {

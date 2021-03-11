@@ -9,7 +9,120 @@
     font-family: "Raleway", Helvetica, sans-serif;
 }
 
-div.image {
+button {
+    background-color: #2da2ca;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    outline: none;
+  }
+
+.login-button {
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  color: rgb(207, 198, 198);
+  padding: 10px 18px;
+  background-color: rgb(48, 46, 46);
+  border-radius: 30px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+  position: relative;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    position: relative;
+  }
+  
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: normal;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: rgb(55, 158, 209);
+    cursor: pointer;
+  }
+  /* form {
+      position: relative;
+  } */
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  } 
+
+
+
+  /* reg form css applied from here */
+
+
+
+div.image-container {
     background-color: rgb(46, 53, 53);
     width: 30%;
     height: 100vh;
@@ -18,7 +131,7 @@ div.image {
     float: left;
     background-image: linear-gradient(to top right,#080808, #717171, #ccc);
 }
-div.form {
+div.form-container {
     
     width: 70%;
     height: 100vh;
@@ -26,7 +139,7 @@ div.form {
     float: right;
 }
 
-div p {
+div > p {
     color: rgb(228, 222, 223);
     font-size: 40px;
     font-weight: bolder;
@@ -48,16 +161,19 @@ section.form-header {
     /* background-color: aquamarine; */
 }
 
-h1 button {
+.login_button {
     background-color: #2da2ca;
     color: white;
     font-size: medium;
     padding: 14px 50px;
-    margin: 8px 20px;
+    margin: 8px 15px;
     border: none;
     cursor: pointer;
     border-radius: 30px;
     outline: none;
+    /* width: 30%;
+    height: 60px; */
+    text-align: center;
 }
 
 button:hover {
@@ -85,7 +201,7 @@ div.formSL h2 {
     font-weight: lighter;
 }
 
-input[type=email], input[type=password] {
+input[type=email], input[type=password], input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -102,6 +218,9 @@ input[type=email], input[type=password] {
   input[type=email]:focus {
       border : 3px solid #2da2ca;
   }
+  input[type=text]:focus {
+    border : 3px solid #2da2ca;
+  }
 
   label {
       display: block;
@@ -109,7 +228,7 @@ input[type=email], input[type=password] {
       color: #717171;
   }
 
-  form button {
+  .signup-button {
     background-color: #2da2ca;
     border: none;
     color: white;
@@ -121,13 +240,13 @@ input[type=email], input[type=password] {
     outline: none;
   }
 
-  form p {
+  form > p {
       font-size: medium;
       font-weight: bold;
       text-align: center;
       color: #524e4e;
       line-height: normal;
-      padding-top: 0;
+      padding-top: 18px;
   }
 
   span {
@@ -135,7 +254,16 @@ input[type=email], input[type=password] {
       color: #080808;
   }
 
-  span a {
+  span > a {
       color: rgb(199, 190, 190);
       font-weight: 500;
+  }
+
+  span.psw > a {
+      color: #2da2ca;
+  }
+
+  #getdark {
+      color: #494646;
+      padding-bottom: 0;
   }

@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register to VEDAMS</title>
     <link rel="stylesheet" href="css/reg-form-css.css">
 </head>
 <body>
     
     <!-- left -->
     <section id="left" class="image-wrapper">
-        <div class="image container">
+        <div class="image-container">
             <!-- <img src="images/pic07.jpg" alt="background image"> -->
-            <p>Welcome to <span><a href="#">VEDAMS</a></span>'s sign up page.
-            <br><br>
-            Contribute to <span><a href="#">VEDAMS</a></span> by signing up and clicking on the contribute button on the home page.
+            <p id="getdark">Welcome to <span><a href="index.html">VEDAMS</a></span>'s sign up page.</p>
+            <p>
+                Contribute to <span><a href="index.html">VEDAMS</a></span> by signing up and clicking on the contribute button on the home page.
             </p>
         </div>
     </section>
@@ -24,10 +24,35 @@
     <section id="right" class="form-wrapper">
         <div id="login-header">
             <h1>Already have an account?
-                <button>Log in</button>
+                <button class="login_button" onclick="document.getElementById('id01').style.display='block'">Login</button>
             </h1>
+            <!-- Modal Form Begins -->
+            <div id="id01" class="modal">
+            <!-- Modal Content -->
+                <form class="modal-content animate" action="" method="">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+                    <div class="imgcontainer">
+                        <img src="images/profile_placeholder.gif" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+                        <button type="submit" class='login-button'>Login</button>
+                        <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                    </div>
+                    <div class="container" style="background-color:#bbb2b2b7">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form container">
+        <!-- Reg form container -->
+        <div class="form-container">
             <div class="wrapper_form">
                 <div class="formSL" >
                     <h2 class="title_text">Create an Account</h2>
@@ -50,6 +75,6 @@
             
         </div>
     </section>
-    
+
 </body>
 </html>
